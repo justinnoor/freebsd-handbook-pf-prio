@@ -1,6 +1,6 @@
 ## Prioritizing traffic with prio
 
-[PF](https://www.freebsd.org/cgi/man.cgi?query=pf&apropos=0&sektion=0&manpath=FreeBSD+12.0-RELEASE+and+Ports&arch=default&format=html) processes packets on a first-come-first-serve basis. This may not be optimal for high traffic applications. It may be in our interest to filter certain packets before others. This we can do with the `set prio` option, which prioritizes packets according to a number range of 0 thru 7. Zero is the slowest, and seven is the fastest. The `set prio` is actually enabled by default with a priority of 3. When we use it we are effectively overriding the default value.
+[PF](https://www.freebsd.org/cgi/man.cgi?query=pf&apropos=0&sektion=0&manpath=FreeBSD+12.0-RELEASE+and+Ports&arch=default&format=html) processes packets on a first-come-first-serve basis. This may not be optimal for high traffic applications. It may be in our interest to filter certain packets before others. This we can do with the `set prio` option, which prioritizes packets according to a number range of 0 thru 7. Zero is the slowest, and seven is the fastest. The `set prio` option is enabled by default with a priority of 3. When we use it we are effectively overriding the default value.
 
 Increase the priority of inbound SSH traffic:
 ```
