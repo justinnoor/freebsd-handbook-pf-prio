@@ -23,7 +23,7 @@ Prioritize web traffic to 6, and *ACK* and *lowdelay TOS* packets to 7:
 pass proto tcp to port { 80 443 } set prio (6,7)
 ```
 
-The last example demonstrates the *tuple option*. The first value prioritizes regular packets, and the second value prioritizes *ACK* and/or *lowdelay TOS* packets. By default, ACK and lowdelay packets have to wait in line with everyone else, which can potentially bottleneck the filtering process. The tuple option can move these packets to the front of the line.
+The last example demonstrates the *tuple option*. The first value prioritizes regular packets, and the second value prioritizes *ACK* and/or *lowdelay TOS* packets. By default, ACK and lowdelay packets have to wait in line with everyone else, which can potentially bottleneck the filtering process. The tuple option can move these packets to the front of the line where they can be processed faster.
 
 
 
